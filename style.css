@@ -1,0 +1,385 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.options-cont {
+    height: 4rem;
+    width: 3.5rem;
+    background-color: #dfe4ea;
+    position: absolute;
+    left: 2rem;
+    top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.tools-cont {
+    background-color: #dfe4ea;
+    display: flex;
+    height: 5rem;
+    width: 60vw;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 2rem;
+    left: 22vw;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.scale-tools {
+    animation-name: scale-tools;
+    animation-duration: 1s;
+}
+
+@keyframes scale-tools {
+    0% {
+        transform: scale(0.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.tools-cont>* {
+    display: block;
+    width: 4rem;
+    /* always set image width and height for sizing */
+}
+
+.pencil-tool-cont {
+    height: 5rem;
+    width: 7rem;
+    position: absolute;
+    top: 7rem;
+    left: 22vw;
+    background-color: #dfe4ea;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: none;
+}
+
+.pencil-width-cont {
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.pencil-width-cont input {
+    width: 80%;
+
+}
+
+.pencil-color-cont {
+    height: calc(100% - 2rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.pencil-color {
+    height: 2rem;
+    width: 1.5rem;
+    border-radius: 50%;
+}
+
+.black {
+    background-color: black;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.eraser-tool-cont {
+    width: 7rem;
+    height: 2rem;
+    background-color: #dfe4ea;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* display: flex; */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 7rem;
+    left: 31vw;
+}
+
+.eraser-tool-cont input {
+    width: 80%;
+}
+
+
+/* sticky styling */
+.sticky-cont {
+    height: 15rem;
+    width: 15rem;
+    position: absolute;
+    top: 13rem;
+    left: 8rem;
+}
+
+.header-cont {
+    height: 2rem;
+    background-color: #dfe4ea;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header-cont>* {
+    height: 1.3rem;
+    width: 1.3rem;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+}
+
+.minimise {
+    background-color: #20bf6b;
+}
+
+.remove {
+    background-color: #eb3b5a;
+}
+
+.notes-cont {
+    height: calc(100% - 2rem);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+textarea {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    resize: none;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+
+
+@media screen and (max-width:450px) {
+    .tools-cont {
+        height: 3rem;
+        width: 70vw;
+        position: absolute;
+        top: 2rem;
+        left: 19vw;
+    }
+
+    .tools-cont>* {
+        display: block;
+        width: 1.7rem;
+        /* always set image width and height for sizing */
+    }
+    .options-cont{
+        height: 2.5rem;
+        width: 2rem;
+        background-color: #dfe4ea;
+        position: absolute;
+        left: 1rem;
+        top: 2.2rem;
+        font-size: 1rem;
+    }
+     
+    .pencil-tool-cont {
+        height: 3rem;
+        width: 2.5rem;
+        position: absolute;
+        top: 5rem;
+        left: 19vw;
+        display: none;
+    }
+
+    .pencil-width-cont {
+        height: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    
+    .pencil-width-cont input {
+        width: 80%;
+    
+    }
+    
+    .pencil-color-cont {
+        height: calc(100% - 1rem);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.4rem;
+    }
+    
+    .pencil-color {
+        height: 1rem;
+        width: 1rem;
+        border-radius: 50%;
+    }
+    .eraser-tool-cont{
+        width: 2.5rem;
+        height: 1.5rem;
+        position: absolute;
+        top: 5rem;
+        left: 31vw;
+    }
+
+    .sticky-cont {
+        height: 10rem;
+        width: 10rem;
+        position: absolute;
+        top: 11rem;
+        left: 6rem;
+    }
+    
+    .header-cont {
+        height: 1.8rem;
+        background-color: #dfe4ea;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    .header-cont>* {
+        height: 1rem;
+        width: 1rem;
+        margin-right: 0.3rem;
+        border-radius: 50%;
+    }
+    
+}
+
+@media screen and (min-width:451px) and (max-width:768px){
+
+    .tools-cont {
+        height: 3rem;
+        width: 70vw;
+        position: absolute;
+        top: 2rem;
+        left: 22vw;
+    }
+
+    .tools-cont>* {
+        display: block;
+        width: 1.7rem;
+        /* always set image width and height for sizing */
+    }
+    .options-cont{
+        height: 3rem;
+        width: 2.5rem;
+        background-color: #dfe4ea;
+        position: absolute;
+        left: 1rem;
+        top: 2.2rem;
+        font-size: 1rem;
+    }
+    .pencil-tool-cont {
+        height: 3.5rem;
+        width: 3rem;
+        position: absolute;
+        top: 5rem;
+        left: 21vw;
+        display: none;
+    }
+
+    .pencil-width-cont {
+        height: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    
+    .pencil-width-cont input {
+        width: 80%;
+    
+    }
+    
+    .pencil-color-cont {
+        height: calc(100% - 1.5rem);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.4rem;
+    }
+    
+    .pencil-color {
+        height: 1rem;
+        width: 1rem;
+        border-radius: 50%;
+    }
+    .eraser-tool-cont{
+        width: 3rem;
+        height: 1.5rem;
+        position: absolute;
+        top: 5rem;
+        left: 31.5vw;
+    }
+
+}
+@media screen and (min-width:768px) and (max-width:1260px){
+    .tools-cont{
+        width: 70vw;
+    }
+    .pencil-tool-cont {
+        height: 4rem;
+        width: 3.5rem;
+        position: absolute;
+        top: 7rem;
+        left: 22vw;
+        display: none;
+    }
+
+    .pencil-width-cont {
+        height: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    
+    .pencil-width-cont input {
+        width: 80%;
+    
+    }
+    
+    .pencil-color-cont {
+        height: calc(100% - 2rem);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.4rem;
+    }
+    
+    .pencil-color {
+        height: 1.3rem;
+        width: 1.3rem;
+        border-radius: 50%;
+    }
+    .eraser-tool-cont{
+        width: 4rem;
+        height: 1.5rem;
+        position: absolute;
+        top: 7rem;
+        left: 31.5vw;
+    }
+}
